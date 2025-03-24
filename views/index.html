@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>QR CODE GENERATOR MATUMBA 1.0</title>
+
+    <link href="/public/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <h1>QR CODE GENERATOR MATUMBA 1.0</h1>
+    <main>
+      <section>
+        <form class="form" action="qr" method="GET">
+          <fieldset>
+            <legend>QR Generation</legend>
+            <label for="data_input"><strong> Data :</strong></label>
+            <input
+              id="data_input"
+              type="text"
+              name="data"
+              placeholder="Any data like text, urls etc"
+            />
+            <div>
+              <label for="image_format"><strong>QR Format :</strong></label>
+              <input id="png" type="radio" name="qrFormat" value="png" />
+              <label for="png">Png</label>
+              <input id="pdf" type="radio" name="qrFormat" value="pdf" />
+              <label for="pdf">Pdf</label>
+              <input id="svg" type="radio" name="qrFormat" value="svg" />
+              <label for="svg">Svg</label>
+              <input id="eps" type="radio" name="qrFormat" value="eps" />
+              <label for="eps">Eps</label>
+            </div>
+            <div>
+              <label for="response_input"><strong>Response Type :</strong></label>
+              <input
+                id="media"
+                title="Media"
+                type="radio"
+                name="responseType"
+                value="media"
+              />
+              <label for="media">Media</label>
+              <input id="b64" type="radio" name="responseType" value="b64" />
+              <label for="b64">Base 64</label>
+            </div>
+
+            <input style="margin-top: 10px" type="submit" value="Generate QR" />
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <footer>
+    </footer>
+  </body>
+</html>
